@@ -1,3 +1,18 @@
-h1 {
-  color: aqua;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 25px;
+  margin-right: 6px;
+}
+
+.brand-name {
+  color: blue;
 }
