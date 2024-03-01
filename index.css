@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+
+html {
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +24,8 @@ a {
   padding: 0 1rem;
   /* background-color: aqua; */
 }
+
+/* navbar */
 
 .navbar {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 8px;
@@ -50,25 +63,63 @@ a {
   font-weight: 600;
 }
 
-.menu-btn {
-  border: none;
-}
+/* sidebar */
 
 .bars {
+  color: #006aff;
+  font-size: 1.5rem;
+}
+
+.xmark {
+  font-size: 1.5rem;
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.links-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 16.5px;
-  width: 25px;
-  background-color: #fff;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 10;
+  width: 300px;
+  height: 100%;
+  background-color: yellowgreen;
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+  transition: 0.75s ease-out;
 }
 
-.bars .bar {
-  width: 100%;
-  height: 2px;
-  background-color: #000;
+#sidebar-active:checked ~ .links-container {
+  right: 0;
 }
+#sidebar-active:checked ~ #overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0);
+}
+
+.link {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.link:hover {
+  background-color: aqua;
+}
+
+/* header */
 
 .header {
+  margin-top: 1rem;
   background-color: aqua;
 }
