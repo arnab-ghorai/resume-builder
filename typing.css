@@ -1,0 +1,32 @@
+.online {
+  color: #1e2532;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.online .resume {
+  color: rebeccapurple;
+  position: relative;
+}
+
+.online .resume::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  background: rebeccapurple;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+.online .resume.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
